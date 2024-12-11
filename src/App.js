@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Home, User, Briefcase, Code, Award, Menu, X, 
-  Mail, Linkedin, FileText 
+  Home, User, Briefcase, Code, Award, Menu, X 
 } from 'lucide-react';
 
 function App() {
@@ -28,43 +27,44 @@ function App() {
   // Navigation Button Component
   const NavButton = ({ icon: Icon, section, label }) => (
     <button
-      className={`flex items-center p-2 rounded-lg transition-all transform 
+      className={`flex items-center justify-center p-2 rounded-lg transition-all transform 
         ${activeSection === section
           ? 'bg-blue-700 text-white scale-105'
           : 'hover:bg-blue-600 hover:text-white text-gray-300'
         } 
-        ${isMobile ? 'w-full justify-center text-lg py-3' : ''}`}
+        ${isMobile ? 'w-full' : ''}`}
       onClick={() => {
         setActiveSection(section);
         setIsMobileMenuOpen(false);
       }}
     >
-      <Icon className="mr-2" size={20} />
-      {!isMobile && <span className="text-base">{label}</span>}
+      <Icon size={20} />
+      {!isMobile && <span className="ml-2 text-base">{label}</span>}
     </button>
   );
 
   // Render Mobile Navigation
   const renderMobileNavigation = () => (
-    <div 
-      className={`fixed bottom-0 left-0 w-full bg-gray-800 z-50 transition-all duration-300 
-        ${isMobileMenuOpen ? 'translate-y-0' : 'translate-y-full'}`}
+    <nav 
+      className={`fixed top-0 left-0 w-full bg-gray-800 z-50 shadow-lg transition-all duration-300 
+        ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}
     >
-      <div className="grid grid-cols-5 gap-1 p-2">
-        <NavButton icon={Home} section="home" label="Home" />
-        <NavButton icon={User} section="about" label="About" />
-        <NavButton icon={Briefcase} section="experience" label="Exp" />
-        <NavButton icon={Code} section="skills" label="Skills" />
-        <NavButton icon={Award} section="projects" label="Projects" />
+      <div className="container mx-auto">
+        <div className="grid grid-cols-5 gap-1 p-2">
+          <NavButton icon={Home} section="home" label="Home" />
+          <NavButton icon={User} section="about" label="About" />
+          <NavButton icon={Briefcase} section="experience" label="Exp" />
+          <NavButton icon={Code} section="skills" label="Skills" />
+          <NavButton icon={Award} section="projects" label="Projects" />
+        </div>
       </div>
-    </div>
+    </nav>
   );
 
   // Render Desktop Navigation
   const renderDesktopNavigation = () => (
     <nav className="bg-gray-800 shadow-md p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold text-blue-500">Ravikant Pathak</div>
+      <div className="container mx-auto flex justify-center items-center">
         <div className="space-x-4 flex">
           <NavButton icon={Home} section="home" label="Home" />
           <NavButton icon={User} section="about" label="About" />
@@ -75,8 +75,8 @@ function App() {
       </div>
     </nav>
   );
-
-  const renderSection = () => {
+  
+    const renderSection = () => {
     switch (activeSection) {
       case 'home':
         return (
