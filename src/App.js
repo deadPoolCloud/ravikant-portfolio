@@ -1,24 +1,79 @@
-import React, { useState } from 'react';
-import { Home, User, Briefcase, Code, Award, Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { 
+  Home, User, Briefcase, Code, Award, Menu, X, 
+  Mail, Linkedin, FileText 
+} from 'lucide-react';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
+  // Responsive check
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Mobile menu toggle
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  // Navigation Button Component
   const NavButton = ({ icon: Icon, section, label }) => (
     <button
-      className={`flex items-center p-2 rounded-lg transition-all transform ${activeSection === section
-        ? 'bg-blue-700 text-white scale-105'
-        : 'hover:bg-blue-600 hover:text-white text-gray-300'
-        }`}
+      className={`flex items-center p-2 rounded-lg transition-all transform 
+        ${activeSection === section
+          ? 'bg-blue-700 text-white scale-105'
+          : 'hover:bg-blue-600 hover:text-white text-gray-300'
+        } 
+        ${isMobile ? 'w-full justify-center text-lg py-3' : ''}`}
       onClick={() => {
         setActiveSection(section);
         setIsMobileMenuOpen(false);
       }}
     >
       <Icon className="mr-2" size={20} />
-      <span className="text-base">{label}</span>
+      {!isMobile && <span className="text-base">{label}</span>}
     </button>
+  );
+
+  // Render Mobile Navigation
+  const renderMobileNavigation = () => (
+    <div 
+      className={`fixed bottom-0 left-0 w-full bg-gray-800 z-50 transition-all duration-300 
+        ${isMobileMenuOpen ? 'translate-y-0' : 'translate-y-full'}`}
+    >
+      <div className="grid grid-cols-5 gap-1 p-2">
+        <NavButton icon={Home} section="home" label="Home" />
+        <NavButton icon={User} section="about" label="About" />
+        <NavButton icon={Briefcase} section="experience" label="Exp" />
+        <NavButton icon={Code} section="skills" label="Skills" />
+        <NavButton icon={Award} section="projects" label="Projects" />
+      </div>
+    </div>
+  );
+
+  // Render Desktop Navigation
+  const renderDesktopNavigation = () => (
+    <nav className="bg-gray-800 shadow-md p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="text-2xl font-bold text-blue-500">Ravikant Pathak</div>
+        <div className="space-x-4 flex">
+          <NavButton icon={Home} section="home" label="Home" />
+          <NavButton icon={User} section="about" label="About" />
+          <NavButton icon={Briefcase} section="experience" label="Experience" />
+          <NavButton icon={Code} section="skills" label="Skills" />
+          <NavButton icon={Award} section="projects" label="Projects" />
+        </div>
+      </div>
+    </nav>
   );
 
   const renderSection = () => {
@@ -283,27 +338,43 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-300 flex flex-col">
-      <nav className="bg-gray-800 shadow-md p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="text-2xl font-bold text-blue-500">Ravikant Pathak</div>
-          <div className="space-x-4 flex">
-            <NavButton icon={Home} section="home" label="Home" />
-            <NavButton icon={User} section="about" label="About" />
-            <NavButton icon={Briefcase} section="experience" label="Experience" />
-            <NavButton icon={Code} section="skills" label="Skills" />
-            <NavButton icon={Award} section="projects" label="Projects" />
+    <div 
+      className="min-h-screen bg-gray-900 text-gray-300 flex flex-col overflow-x-hidden"
+      style={{
+        width: '100vw',
+        maxWidth: '100%',
+        overscrollBehaviorX: 'none'
+      }}
+    >
+      {/* Conditional Navigation Rendering */}
+      {isMobile ? (
+        <>
+          <div className="flex-grow overflow-y-auto pb-20">
+            {renderSection()}
           </div>
-        </div>
-      </nav>
-      <main className="flex-grow container mx-auto">
-        {renderSection()}
-      </main>
+          {renderMobileNavigation()}
+          <button 
+            onClick={toggleMobileMenu} 
+            className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full z-50 shadow-lg"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </>
+      ) : (
+        <>
+          {renderDesktopNavigation()}
+          <main className="flex-grow container mx-auto">
+            {renderSection()}
+          </main>
+        </>
+      )}
+
       <footer className="bg-gray-800 p-4 text-center">
         <p className="text-gray-400 text-sm">© 2024 Ravikant Pathak. All Rights Reserved.</p>
       </footer>
     </div>
   );
+
 }
 
 export default App;
