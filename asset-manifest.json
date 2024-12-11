@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ravikant-portfolio/static/css/main.261257b1.css",
-    "main.js": "/ravikant-portfolio/static/js/main.03b08868.js",
+    "main.js": "/ravikant-portfolio/static/js/main.fd451aa9.js",
     "static/js/488.8067db21.chunk.js": "/ravikant-portfolio/static/js/488.8067db21.chunk.js",
     "index.html": "/ravikant-portfolio/index.html",
     "main.261257b1.css.map": "/ravikant-portfolio/static/css/main.261257b1.css.map",
-    "main.03b08868.js.map": "/ravikant-portfolio/static/js/main.03b08868.js.map",
+    "main.fd451aa9.js.map": "/ravikant-portfolio/static/js/main.fd451aa9.js.map",
     "488.8067db21.chunk.js.map": "/ravikant-portfolio/static/js/488.8067db21.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.261257b1.css",
-    "static/js/main.03b08868.js"
+    "static/js/main.fd451aa9.js"
   ]
 }
