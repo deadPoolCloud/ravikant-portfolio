@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
-import { Home, User, Briefcase, Code, Award } from 'lucide-react';
+import { Home, User, Briefcase, Code, Award, Menu, X } from 'lucide-react';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const NavButton = ({ icon: Icon, section, label }) => (
     <button
       className={`flex items-center p-2 rounded-lg transition-all transform ${activeSection === section
-          ? 'bg-blue-700 text-white scale-105'
-          : 'hover:bg-blue-600 hover:text-white text-gray-300'
+        ? 'bg-blue-700 text-white scale-105'
+        : 'hover:bg-blue-600 hover:text-white text-gray-300'
         }`}
-      onClick={() => setActiveSection(section)}
+      onClick={() => {
+        setActiveSection(section);
+        setIsMobileMenuOpen(false);
+      }}
     >
       <Icon className="mr-2" size={20} />
       <span className="text-base">{label}</span>
@@ -65,7 +69,7 @@ function App() {
               }}
             >
               I am passionate about collaborating with cross-functional teams to identify and resolve critical issues, ensuring
-              robust software systems that meet and exceed end-user expectations. Whether it’s functional validation, end-to-end
+              robust software systems that meet and exceed end-user expectations. Whether it's functional validation, end-to-end
               testing, or ensuring consistent quality across complex workflows, I approach each challenge with a meticulous and
               innovative mindset.
             </p>
@@ -88,12 +92,9 @@ function App() {
           </div>
         );
 
-
       case 'about':
-
         return (
           <div className="p-8 text-white flex flex-wrap">
-
             {/* Professional Profile Section (Left Side) */}
             <div className="w-full md:w-1/2 mb-12 pr-8">
               <h2 className="text-4xl font-bold mb-6">About Me</h2>
@@ -103,7 +104,7 @@ function App() {
                   As a dedicated QA Engineer, I specialize in ensuring the quality of both web and mobile applications through comprehensive testing strategies and automation. With expertise in test automation, AI-powered testing, and a focus on delivering high-quality software, I aim to contribute to products that exceed functional and user-experience expectations. My background includes hands-on experience with Selenium, Appium, TestNG, and other automation tools that allow me to build scalable, efficient frameworks.
                 </p>
                 <p className="text-lg text-gray-300 mb-4">
-                  I have a passion for creating robust automation frameworks that not only streamline testing processes but also minimize human error, improving efficiency and overall product quality. My approach is rooted in continuous improvement—whether it’s automating repetitive test cases or optimizing performance through tools like JMeter. I am well-versed in integrating these automation practices into CI/CD pipelines using Jenkins, ensuring that continuous testing is an integral part of the development lifecycle.
+                  I have a passion for creating robust automation frameworks that not only streamline testing processes but also minimize human error, improving efficiency and overall product quality. My approach is rooted in continuous improvement—whether it's automating repetitive test cases or optimizing performance through tools like JMeter. I am well-versed in integrating these automation practices into CI/CD pipelines using Jenkins, ensuring that continuous testing is an integral part of the development lifecycle.
                 </p>
                 <p className="text-lg text-gray-300 mb-4">
                   In addition to my technical skills, I excel in collaborating with cross-functional teams in agile environments, focusing on sprint goals and adapting quickly to project requirements. My experience in AI-driven testing gives me a unique ability to test intelligent features, ensuring they perform as intended under various conditions. Through these efforts, I contribute to delivering software that is not only functional but also performs optimally, providing users with seamless experiences.
@@ -137,9 +138,7 @@ function App() {
               </p>
             </div>
           </div>
-
         );
-
 
       case 'experience':
         return (
@@ -181,100 +180,100 @@ function App() {
                 <li className="mb-2">Contributed to the creation of test documentation, including test plans, test cases, and test data management, improving future testing efficiency.</li>
               </ul>
             </div>
-
           </div>
         );
 
-        case 'skills':
-          return (
-            <div className="p-8 text-white">
-              <h2 className="text-4xl font-bold mb-6">Skills</h2>
-              <ul className="list-disc pl-6 text-lg text-gray-300">
-                <li className="mb-2">Manual Testing (Functional, Regression, and UI Testing)</li>
-                <li className="mb-2">Test Automation (Selenium WebDriver, TestNG, JUnit)</li>
-                <li className="mb-2">Performance Testing (JMeter)</li>
-                <li className="mb-2">API Testing (Postman, Rest Assured)</li>
-                <li className="mb-2">Continuous Integration (Jenkins)</li>
-                <li className="mb-2">Version Control (Git, GitHub)</li>
-                <li className="mb-2">Programming Languages (Java, Python)</li>
-                <li className="mb-2">Defect Tracking and Reporting (JIRA)</li>
-                <li className="mb-2">Database Testing (MySQL, SQL Queries)</li>
-                <li className="mb-2">Cloud Testing (AWS, Docker)</li>
-                <li className="mb-2">Test Reporting (Allure, TestNG Reports)</li>
-                <li className="mb-2">Automation Framework Development (Page Object Model, Data-Driven, Keyword-Driven)</li>
-                <li className="mb-2">Agile Methodology (Scrum, Kanban)</li>
-              </ul>
-            </div>
-          );
-          case 'projects':
-            return (
-              <div className="p-8 text-white">
-                <h2 className="text-4xl font-bold mb-6">Projects</h2>
-                <ul className="list-disc pl-6 text-lg text-gray-300">
-                <li className="mb-4">
-  <strong>Interactive Virtual Tutor (IVT)</strong> - <em>QA Tester</em>
-  <p className="mt-2">
-    Contributed to the QA process for Globsyn Business School's AI-driven learning platform, which provides personalized education experiences for students.
-  </p>
-  <ul className="list-disc pl-5 mt-2">
-    <li>Built a comprehensive end-to-end test automation framework using Selenium WebDriver, ensuring efficient testing workflows.</li>
-    <li>Developed reusable page objects and test suites for web interfaces, significantly improving testing consistency and reusability.</li>
-    <li>Reduced regression testing time by 50% through automation, accelerating release cycles and improving platform reliability.</li>
-    <li>Collaborated with cross-functional teams using Jenkins for continuous integration and JIRA for issue tracking.</li>
-    <li>Performed API testing using Postman, ensuring smooth interaction between system components.</li>
-    <li>Technologies: Selenium WebDriver, TestNG, Jenkins, JIRA, Java, Maven, Postman.</li>
-  </ul>
-</li>
+      case 'skills':
+        return (
+          <div className="p-8 text-white">
+            <h2 className="text-4xl font-bold mb-6">Skills</h2>
+            <ul className="list-disc pl-6 text-lg text-gray-300">
+              <li className="mb-2">Manual Testing (Functional, Regression, and UI Testing)</li>
+              <li className="mb-2">Test Automation (Selenium WebDriver, TestNG, JUnit)</li>
+              <li className="mb-2">Performance Testing (JMeter)</li>
+              <li className="mb-2">API Testing (Postman, Rest Assured)</li>
+              <li className="mb-2">Continuous Integration (Jenkins)</li>
+              <li className="mb-2">Version Control (Git, GitHub)</li>
+              <li className="mb-2">Programming Languages (Java, Python)</li>
+              <li className="mb-2">Defect Tracking and Reporting (JIRA)</li>
+              <li className="mb-2">Database Testing (MySQL, SQL Queries)</li>
+              <li className="mb-2">Cloud Testing (AWS, Docker)</li>
+              <li className="mb-2">Test Reporting (Allure, TestNG Reports)</li>
+              <li className="mb-2">Automation Framework Development (Page Object Model, Data-Driven, Keyword-Driven)</li>
+              <li className="mb-2">Agile Methodology (Scrum, Kanban)</li>
+            </ul>
+          </div>
+        );
 
-<li className="mb-4">
-  <strong>GBSO Portal</strong> - <em>QA Tester</em>
-  <p className="mt-2">
-    Played a critical role in preparing the GBSO portal for its release by November 2024, ensuring a smooth user experience and complete functionality.
-  </p>
-  <ul className="list-disc pl-5 mt-2">
-    <li>Addressed key technical challenges, including SSL configuration and the implementation of course lock/unlock features.</li>
-    <li>Ensured all essential features were tested, validated, and included as part of the final release.</li>
-    <li>Performed thorough regression and functional testing to maintain application stability across updates.</li>
-    <li>Collaborated effectively with developers and stakeholders using JIRA to manage issues and prioritize resolutions.</li>
-    <li>Technologies: Selenium WebDriver, Java, SQL, JIRA.</li>
-  </ul>
-</li>
-
-              
-                
-                
-                  <li className="mb-4">
-  <strong>Meeting500mg</strong> - <em>QA Tester</em> (05/2023 - 07/2024)
-  <p className="mt-2">
-    Contributed to the QA process for Meeting500mg, a Meeting Management and Chat Application designed as an alternative to platforms like Flock, Zoom, Skype, and Slack. Played a key role in ensuring application stability and improving the overall user experience.
-  </p>
-  <ul className="list-disc pl-5 mt-2">
-    <li>Designed and implemented a robust test automation framework using Selenium, covering core functionalities.</li>
-    <li>Performed comprehensive functional, regression, and performance testing to identify and resolve issues efficiently.</li>
-    <li>Collaborated closely with development teams via JIRA and Git for bug tracking and version control.</li>
-    <li>Validated back-end integrations through API testing using Postman and Rest-assured.</li>
-    <li>Improved application stability by reducing defect rates by 25% and cutting testing cycle times by 30% through automation.</li>
-  </ul>
-</li>
-
-<li className="mb-4">
-  <strong>Borrower Portal</strong> - <em>QA Tester</em> (03/2023 - 07/2024)
-  <p className="mt-2">
-    Played a vital role in the QA efforts for Borrower Portal, a real estate loan processing system designed to streamline interactions between borrowers and loan approvers.
-  </p>
-  <ul className="list-disc pl-5 mt-2">
-    <li>Developed and maintained automated test suites using Selenium, focusing on data validation and key feature automation.</li>
-    <li>Performed in-depth regression testing to ensure application stability during updates and releases.</li>
-    <li>Used Postman for API testing to validate seamless back-end communication and data accuracy.</li>
-    <li>Collaborated effectively with cross-functional teams using JIRA and Git for issue tracking and resolution.</li>
-    <li>Enhanced the application's quality by identifying and resolving critical defects, ensuring a smooth user experience.</li>
-  </ul>
-</li>
-
+    case 'projects':
+        return (
+          <div className="p-8 text-white">
+            <h2 className="text-4xl font-bold mb-6">Projects</h2>
+            <ul className="list-disc pl-6 text-lg text-gray-300">
+              <li className="mb-4">
+                <strong>Interactive Virtual Tutor (IVT)</strong> - <em>QA Tester</em>
+                <p className="mt-2">
+                  Contributed to the QA process for Globsyn Business School's AI-driven learning platform, which provides personalized education experiences for students.
+                </p>
+                <ul className="list-disc pl-5 mt-2">
+                  <li>Built a comprehensive end-to-end test automation framework using Selenium WebDriver, ensuring efficient testing workflows.</li>
+                  <li>Developed reusable page objects and test suites for web interfaces, significantly improving testing consistency and reusability.</li>
+                  <li>Reduced regression testing time by 50% through automation, accelerating release cycles and improving platform reliability.</li>
+                  <li>Collaborated with cross-functional teams using Jenkins for continuous integration and JIRA for issue tracking.</li>
+                  <li>Performed API testing using Postman, ensuring smooth interaction between system components.</li>
+                  <li>Technologies: Selenium WebDriver, TestNG, Jenkins, JIRA, Java, Maven, Postman.</li>
                 </ul>
-              </div>
-            );
-                  
+              </li>
+
+              <li className="mb-4">
+                <strong>GBSO Portal</strong> - <em>QA Tester</em>
+                <p className="mt-2">
+                  Played a critical role in preparing the GBSO portal for its release by November 2024, ensuring a smooth user experience and complete functionality.
+                </p>
+                <ul className="list-disc pl-5 mt-2">
+                  <li>Addressed key technical challenges, including SSL configuration and the implementation of course lock/unlock features.</li>
+                  <li>Ensured all essential features were tested, validated, and included as part of the final release.</li>
+                  <li>Performed thorough regression and functional testing to maintain application stability across updates.</li>
+                  <li>Collaborated effectively with developers and stakeholders using JIRA to manage issues and prioritize resolutions.</li>
+                  <li>Technologies: Selenium WebDriver, Java, SQL, JIRA.</li>
+                </ul>
+              </li>
+
+
+
+
+              <li className="mb-4">
+                <strong>Meeting500mg</strong> - <em>QA Tester</em> (05/2023 - 07/2024)
+                <p className="mt-2">
+                  Contributed to the QA process for Meeting500mg, a Meeting Management and Chat Application designed as an alternative to platforms like Flock, Zoom, Skype, and Slack. Played a key role in ensuring application stability and improving the overall user experience.
+                </p>
+                <ul className="list-disc pl-5 mt-2">
+                  <li>Designed and implemented a robust test automation framework using Selenium, covering core functionalities.</li>
+                  <li>Performed comprehensive functional, regression, and performance testing to identify and resolve issues efficiently.</li>
+                  <li>Collaborated closely with development teams via JIRA and Git for bug tracking and version control.</li>
+                  <li>Validated back-end integrations through API testing using Postman and Rest-assured.</li>
+                  <li>Improved application stability by reducing defect rates by 25% and cutting testing cycle times by 30% through automation.</li>
+                </ul>
+              </li>
+
+              <li className="mb-4">
+                <strong>Borrower Portal</strong> - <em>QA Tester</em> (03/2023 - 07/2024)
+                <p className="mt-2">
+                  Played a vital role in the QA efforts for Borrower Portal, a real estate loan processing system designed to streamline interactions between borrowers and loan approvers.
+                </p>
+                <ul className="list-disc pl-5 mt-2">
+                  <li>Developed and maintained automated test suites using Selenium, focusing on data validation and key feature automation.</li>
+                  <li>Performed in-depth regression testing to ensure application stability during updates and releases.</li>
+                  <li>Used Postman for API testing to validate seamless back-end communication and data accuracy.</li>
+                  <li>Collaborated effectively with cross-functional teams using JIRA and Git for issue tracking and resolution.</li>
+                  <li>Enhanced the application's quality by identifying and resolving critical defects, ensuring a smooth user experience.</li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        );
+
 
 
       // Add similar updates for 'experience', 'skills', and 'projects'
