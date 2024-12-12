@@ -71,6 +71,15 @@ img, video, iframe {
   padding-top: 20px;
 }
 
+/* Mobile Styles for Background Image */
+@media screen and (max-width: 768px) {
+  .about-section {
+    background-attachment: scroll; /* Prevent fixed background issues on mobile */
+    background-size: contain; /* Ensure the image fits without clipping */
+    background-position: top center; /* Align the image for better visibility */
+  }
+}
+
 /* Text Overlay Styles */
 .about-section-overlay {
   position: absolute;
