@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import profileImage from './profilepic/Professional photo.png';
+import homeback from './profilepic/homebg.jpg';
 import {
   Home, User, Briefcase, Code, Award
 } from 'lucide-react';
@@ -82,93 +84,92 @@ function App() {
     switch (activeSection) {
       case 'home':
         return (
-          <div className="flex items-center justify-center min-h-screen px-4">
-            <div className="text-center max-w-2xl mx-auto">
-              <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">Ravikant Pathak</h1>
-              <p className="text-white mb-4 text-base md:text-lg leading-relaxed">
-                I'm a QA Engineer with 2 years of experience in ensuring quality for cutting-edge applications, 
-                specializing in functional, regression, and UI testing with automated solutions.
-              </p>
-              <p className="text-white mb-4 text-base md:text-lg leading-relaxed">
-                Skilled in Selenium, TestNG, and Jenkins, I collaborate with cross-functional teams to 
-                deliver robust software solutions that exceed user expectations.
-              </p>
-              <div className="flex justify-center space-x-4 mt-6">
-                <a
-                  href="mailto:ravikantpathak489@gmail.com"
-                  className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-all"
-                >
-                  Contact Me
-                </a>
-                <a
-                  href="https://linkedin.com/in/ravikantpathak489"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-all"
-                >
-                  LinkedIn Profile
-                </a>
-              </div>
-            </div>
+          <div
+            className="flex items-center justify-center min-h-screen px-4"
+            style={{
+              backgroundImage: `url(${homeback})`,
+              backgroundAttachment: 'fixed',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <div class="text-center max-w-2xl mx-auto p-6 rounded-lg">
+  <h1 class="text-3xl md:text-4xl font-bold mb-4 text-white">Ravikant Pathak</h1>
+  <p class="text-white mb-4 text-base md:text-lg leading-relaxed">
+    I'm a QA Engineer with 2 years of experience in ensuring quality for cutting-edge applications, 
+    specializing in functional, regression, and UI testing with automated solutions.
+  </p>
+  <p class="text-white mb-4 text-base md:text-lg leading-relaxed">
+    Skilled in Selenium, TestNG, and Jenkins, I collaborate with cross-functional teams to 
+    deliver robust software solutions that exceed user expectations.
+  </p>
+  <div class="flex justify-center space-x-4 mt-6">
+    <a
+      href="mailto:ravikantpathak489@gmail.com"
+      class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-all"
+    >
+      Contact Me
+    </a>
+    <a
+      href="https://linkedin.com/in/ravikantpathak489"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-all"
+    >
+      LinkedIn Profile
+    </a>
+  </div>
+</div>
           </div>
         );
 
-      case 'about':
-        return (
-          <div className="container mx-auto p-4 md:p-8 text-white">
-            <div className="flex flex-col md:flex-row gap-8">
-              {/* Professional Profile Section (Left Side) */}
-              <div className="w-full md:w-1/2">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
-                <div className="mb-12">
-                  <h3 className="text-2xl font-bold mb-4">Professional Profile</h3>
-                  <p className="text-base md:text-lg text-gray-300 mb-4">
-                    As a QA Engineer, I specialize in ensuring software quality through strategic testing and automation. 
-                    My expertise spans web and mobile applications, leveraging tools like Selenium, Appium, and TestNG 
-                    to create efficient, scalable testing frameworks.
-                  </p>
-                  <p className="text-base md:text-lg text-gray-300 mb-4">
-                    I focus on building robust automation solutions that streamline testing processes, minimize errors, 
-                    and integrate seamlessly with CI/CD pipelines using Jenkins. My approach combines technical precision 
-                    with continuous improvement.
-                  </p>
-                  <p className="text-base md:text-lg text-gray-300 mb-4">
-                    Collaborating in agile environments, I contribute to delivering high-quality software that meets 
-                    both functional requirements and user experience expectations.
-                  </p>
+        case 'about':
+          return (
+            <div className="about-section">
+              <div className="container mx-auto p-4 md:p-8">
+                <div className="flex flex-col md:flex-row gap-8">
+                  {/* Left side: Professional Profile */}
+                  <div className="w-full md:w-1/2">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
+                    <div className="mb-12">
+                      <h3 className="text-2xl font-bold mb-4">Professional Profile</h3>
+                      <p className="text-base md:text-lg text-gray-300 mb-4">
+                        As a QA Engineer, I specialize in ensuring software quality through strategic testing and automation.
+                      </p>
+                      <p className="text-base md:text-lg text-gray-300 mb-4">
+                        I focus on building robust automation solutions that streamline testing processes, minimize errors, and integrate seamlessly with CI/CD pipelines.
+                      </p>
+                    </div>
+                    {/* Display Image */}
+                    <img 
+                      src={profileImage} 
+                      alt="Profile" 
+                      className="w-full md:w-1/2 h-auto object-cover rounded-lg"
+                    />
+                  </div>
+                  
+                  {/* Right side: Education & Training */}
+                  <div className="w-full md:w-1/2">
+                    <h3 className="text-2xl font-bold mb-4">Education</h3>
+                    <p className="text-base md:text-lg text-gray-300 mb-2">
+                      B.Tech in Mechanical Engineering | Coochbehar Government Engineering College, 2018 - 2022
+                    </p>
+                    <p className="text-gray-300 text-base md:text-lg mb-4">CGPA: 8.65</p>
+                    <p className="text-gray-300 text-base md:text-lg mb-4">
+                      Despite a mechanical engineering background, I transitioned to QA, applying my analytical problem-solving skills to software testing and automation.
+                    </p>
+        
+                    <h3 className="text-2xl font-bold mb-4">Training & Certifications</h3>
+                    <ul className="list-disc pl-6 text-base md:text-lg text-gray-300 mb-4">
+                      <li className="mb-2">Certified in Advanced Selenium Automation</li>
+                      <li className="mb-2">ISTQB Certified Tester – Foundation Level</li>
+                      <li className="mb-2">AWS Certified Cloud Practitioner (planned)</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-      
-              {/* Right Side (Education & Training Section) */}
-              <div className="w-full md:w-1/2">
-                {/* Education Section */}
-                <h3 className="text-2xl font-bold mb-4">Education</h3>
-                <p className="text-base md:text-lg text-gray-300 mb-2">
-                  B.Tech in Mechanical Engineering | Coochbehar Government Engineering College, 2018 - 2022
-                </p>
-                <p className="text-gray-300 text-base md:text-lg mb-4">CGPA: 8.65</p>
-                <p className="text-gray-300 text-base md:text-lg mb-4">
-                  Despite a mechanical engineering background, I transitioned to QA, applying my analytical problem-solving 
-                  skills to software testing and automation.
-                </p>
-      
-                {/* Training & Certifications Section */}
-                <h3 className="text-2xl font-bold mb-4">Training & Certifications</h3>
-                <ul className="list-disc pl-6 text-base md:text-lg text-gray-300 mb-4">
-                  <li className="mb-2">Certified in Advanced Selenium Automation</li>
-                  <li className="mb-2">ISTQB Certified Tester – Foundation Level</li>
-                  <li className="mb-2">Tricentis Tosca AE1 and AE2 (in progress)</li>
-                  <li className="mb-2">AWS Certified Cloud Practitioner (planned)</li>
-                  <li className="mb-2">Certified Jenkins Engineer (planned)</li>
-                </ul>
-                <p className="text-base md:text-lg text-gray-300 mb-4">
-                  I completed a comprehensive Software Testing course at QSpiders Kolkata, gaining practical skills 
-                  in manual and automation testing across tools like Selenium, TestNG, Postman, and JMeter.
-                </p>
-              </div>
             </div>
-          </div>
-        );
+          );
 
       case 'experience':
         return (

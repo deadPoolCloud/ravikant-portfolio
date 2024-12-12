@@ -16,6 +16,7 @@ html, body {
   --text-primary: #e2e8f0;
   --accent-color: #3182ce;
   --hover-color: #4299e1;
+  --bg-image-opacity: 0.6; /* Optional: controls opacity of background image */
 }
 
 /* Scrollbar Customization */
@@ -58,11 +59,48 @@ img, video, iframe {
   object-fit: contain;
 }
 
-/* Text and Content Overflow Prevention */
-p, span, div {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  max-width: 100%;
+/* About Section Background */
+.about-section {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('./profilepic/Screenshot from 2024-12-12 11-30-14.png'); /* Update path to your image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps the background fixed during scroll */
+  color: white;
+  padding-top: 20px;
+}
+
+/* Text Overlay Styles */
+.about-section-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, var(--bg-image-opacity)); /* Darkens background for better text readability */
+  z-index: 1;
+}
+
+/* Text Content Styling */
+.about-section-content {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Slight transparency for better text readability */
+  border-radius: 8px;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
 }
 
 /* Animations and Transitions */
@@ -73,25 +111,6 @@ p, span, div {
 
 .animate-fadeIn {
   animation: fadeIn 0.5s ease-out;
-}
-
-/* Responsive Layout Utilities */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Mobile Menu Transition */
-@media screen and (max-width: 768px) {
-  .mobile-nav-enter {
-    transform: translateY(100%);
-  }
-  .mobile-nav-enter-active {
-    transform: translateY(0);
-    transition: transform 300ms ease-in-out;
-  }
 }
 
 /* Accessibility and Focus States */
@@ -105,5 +124,12 @@ button:focus, a:focus {
   body {
     background: white;
     color: black;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .about-section-content {
+    padding: 20px;
   }
 }
