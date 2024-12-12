@@ -149,53 +149,55 @@ function App() {
           </div>
         );
 
-      case 'about':
-        return (
-          <div className="p-8 text-white flex flex-wrap">
-            {/* Professional Profile Section (Left Side) */}
-            <div className="w-full md:w-1/2 mb-12 pr-8">
-              <h2 className="text-4xl font-bold mb-6">About Me</h2>
-              <div className="mb-12">
-                <h3 className="text-2xl font-bold mb-4">Professional Profile</h3>
-                <p className="text-lg text-gray-300 mb-4">
-                  As a dedicated QA Engineer, I specialize in ensuring the quality of both web and mobile applications through comprehensive testing strategies and automation. With expertise in test automation, AI-powered testing, and a focus on delivering high-quality software, I aim to contribute to products that exceed functional and user-experience expectations. My background includes hands-on experience with Selenium, Appium, TestNG, and other automation tools that allow me to build scalable, efficient frameworks.
-                </p>
-                <p className="text-lg text-gray-300 mb-4">
-                  I have a passion for creating robust automation frameworks that not only streamline testing processes but also minimize human error, improving efficiency and overall product quality. My approach is rooted in continuous improvement—whether it's automating repetitive test cases or optimizing performance through tools like JMeter. I am well-versed in integrating these automation practices into CI/CD pipelines using Jenkins, ensuring that continuous testing is an integral part of the development lifecycle.
-                </p>
-                <p className="text-lg text-gray-300 mb-4">
-                  In addition to my technical skills, I excel in collaborating with cross-functional teams in agile environments, focusing on sprint goals and adapting quickly to project requirements. My experience in AI-driven testing gives me a unique ability to test intelligent features, ensuring they perform as intended under various conditions. Through these efforts, I contribute to delivering software that is not only functional but also performs optimally, providing users with seamless experiences.
-                </p>
+        case 'about':
+          return (
+            <div className="container mx-auto p-4 md:p-8 text-white">
+              <div className="flex flex-col md:flex-row gap-8">
+                {/* Professional Profile Section (Left Side) */}
+                <div className="w-full md:w-1/2">
+                  <h2 className="text-4xl font-bold mb-6">About Me</h2>
+                  <div className="mb-12">
+                    <h3 className="text-2xl font-bold mb-4">Professional Profile</h3>
+                    <p className="text-lg text-gray-300 mb-4">
+                      As a dedicated QA Engineer, I specialize in ensuring the quality of both web and mobile applications through comprehensive testing strategies and automation. With expertise in test automation, AI-powered testing, and a focus on delivering high-quality software, I aim to contribute to products that exceed functional and user-experience expectations. My background includes hands-on experience with Selenium, Appium, TestNG, and other automation tools that allow me to build scalable, efficient frameworks.
+                    </p>
+                    <p className="text-lg text-gray-300 mb-4">
+                      I have a passion for creating robust automation frameworks that not only streamline testing processes but also minimize human error, improving efficiency and overall product quality. My approach is rooted in continuous improvement—whether it's automating repetitive test cases or optimizing performance through tools like JMeter. I am well-versed in integrating these automation practices into CI/CD pipelines using Jenkins, ensuring that continuous testing is an integral part of the development lifecycle.
+                    </p>
+                    <p className="text-lg text-gray-300 mb-4">
+                      In addition to my technical skills, I excel in collaborating with cross-functional teams in agile environments, focusing on sprint goals and adapting quickly to project requirements. My experience in AI-driven testing gives me a unique ability to test intelligent features, ensuring they perform as intended under various conditions. Through these efforts, I contribute to delivering software that is not only functional but also performs optimally, providing users with seamless experiences.
+                    </p>
+                  </div>
+                </div>
+        
+                {/* Right Side (Education & Training Section) */}
+                <div className="w-full md:w-1/2">
+                  {/* Education Section */}
+                  <h3 className="text-2xl font-bold mb-4">Education</h3>
+                  <p className="text-lg text-gray-300 mb-2">
+                    B.Tech in Mechanical Engineering | Coochbehar Government Engineering College, 2018 - 2022
+                  </p>
+                  <p className="text-gray-300 text-lg mb-4">CGPA: 8.65</p>
+                  <p className="text-gray-300 text-lg mb-4">
+                    Although my degree is in Mechanical Engineering, my deep interest in technology and software engineering led me to transition into Quality Assurance. During my academic journey, I honed problem-solving skills that now help me approach testing challenges from a structured, analytical perspective. My coursework and internships allowed me to explore various technical domains, and ultimately, I found my passion in software testing and automation.
+                  </p>
+        
+                  {/* Training & Certifications Section */}
+                  <h3 className="text-2xl font-bold mb-4">Training & Certifications</h3>
+                  <ul className="list-disc pl-6 text-lg text-gray-300 mb-4">
+                    <li className="mb-2">Certified in Advanced Selenium Automation</li>
+                    <li className="mb-2">ISTQB Certified Tester – Foundation Level</li>
+                    <li className="mb-2">Tricentis Tosca AE1 and AE2 (in progress)</li>
+                    <li className="mb-2">AWS Certified Cloud Practitioner (planned)</li>
+                    <li className="mb-2">Certified Jenkins Engineer (planned)</li>
+                  </ul>
+                  <p className="text-lg text-gray-300 mb-4">
+                    In addition to my degree, I have undergone specialized training that has provided me with practical knowledge and skills to excel in the field of software testing. A comprehensive Software Testing course at QSpiders Kolkata has further refined my skills in both manual and automation testing, making me well-equipped to handle real-world testing challenges. The course included hands-on experience with tools like Selenium, TestNG, Postman, and JMeter, covering aspects from test case creation to performance testing and API testing.
+                  </p>
+                </div>
               </div>
             </div>
-
-            {/* Right Side (Education & Training Section) */}
-            <div className="w-full md:w-1/2">
-              {/* Education Section */}
-              <h3 className="text-2xl font-bold mb-4">Education</h3>
-              <p className="text-lg text-gray-300 mb-2">
-                B.Tech in Mechanical Engineering | Coochbehar Government Engineering College, 2018 - 2022
-              </p>
-              <p className="text-gray-300 text-lg mb-4">CGPA: 8.65</p>
-              <p className="text-gray-300 text-lg mb-4">
-                Although my degree is in Mechanical Engineering, my deep interest in technology and software engineering led me to transition into Quality Assurance. During my academic journey, I honed problem-solving skills that now help me approach testing challenges from a structured, analytical perspective. My coursework and internships allowed me to explore various technical domains, and ultimately, I found my passion in software testing and automation.
-              </p>
-
-              {/* Training & Certifications Section */}
-              <h3 className="text-2xl font-bold mb-4">Training & Certifications</h3>
-              <ul className="list-disc pl-6 text-lg text-gray-300 mb-4">
-                <li className="mb-2">Certified in Advanced Selenium Automation</li>
-                <li className="mb-2">ISTQB Certified Tester – Foundation Level</li>
-                <li className="mb-2">Tricentis Tosca AE1 and AE2 (in progress)</li>
-                <li className="mb-2">AWS Certified Cloud Practitioner (planned)</li>
-                <li className="mb-2">Certified Jenkins Engineer (planned)</li>
-              </ul>
-              <p className="text-lg text-gray-300 mb-4">
-                In addition to my degree, I have undergone specialized training that has provided me with practical knowledge and skills to excel in the field of software testing. A comprehensive Software Testing course at QSpiders Kolkata has further refined my skills in both manual and automation testing, making me well-equipped to handle real-world testing challenges. The course included hands-on experience with tools like Selenium, TestNG, Postman, and JMeter, covering aspects from test case creation to performance testing and API testing.
-              </p>
-            </div>
-          </div>
-        );
+          );
 
       case 'experience':
         return (
