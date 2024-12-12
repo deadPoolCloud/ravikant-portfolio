@@ -86,13 +86,16 @@ function App() {
       case 'home':
         return (
           <div
-            className="about-section"
+            className="flex items-center justify-center min-h-screen px-4"
             style={{
-              backgroundImage: `url(${homeback})`, // This is a fallback; media queries handle the rest
+              backgroundImage: `url(${homeback})`,
+              backgroundAttachment: 'fixed',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              minHeight: '100vh',
             }}
           >
-            <div className="about-section-overlay"></div>
-            <div className="about-section-content">
+            <div className="text-center max-w-2xl mx-auto p-6">
               <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">Ravikant Pathak</h1>
               <p className="text-white mb-4 text-base md:text-lg leading-relaxed">
                 I'm a QA Engineer with 2 years of experience in ensuring quality for cutting-edge applications, 
