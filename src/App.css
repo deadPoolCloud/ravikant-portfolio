@@ -58,26 +58,27 @@ img, video, iframe {
   height: auto;
   object-fit: contain;
 }
-
 /* About Section Background */
 .about-section {
   position: relative;
-  min-height: 100vh;
-  background-image: url('./profilepic/Screenshot from 2024-12-12 11-30-14.png'); /* Update path to your image */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  min-height: 100vh; /* Full viewport height */
+  background-image: url('./profilepic/homebg.jpg'); /* Update to correct path */
+  background-size: cover; /* Ensure the image covers the container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-attachment: fixed; /* Fixed for desktop */
   color: white;
   padding-top: 20px;
 }
 
-/* Adjust for Mobile */
+/* Mobile Adjustments */
 @media screen and (max-width: 768px) {
   .about-section {
-    background-attachment: scroll; /* Override fixed on mobile */
-    background-size: auto;
+    background-attachment: scroll; /* Override fixed background on mobile */
+    background-size: cover; /* Ensure full coverage */
   }
 }
+
 
 /* Text Overlay Styles */
 .about-section-overlay {
