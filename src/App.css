@@ -66,9 +66,17 @@ img, video, iframe {
   background-image: url('./profilepic/Screenshot from 2024-12-12 11-30-14.png'); /* Update path to your image */
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Keeps the background fixed during scroll */
+  background-attachment: fixed;
   color: white;
   padding-top: 20px;
+}
+
+/* Adjust for Mobile */
+@media screen and (max-width: 768px) {
+  .about-section {
+    background-attachment: scroll; /* Override fixed on mobile */
+    background-size: auto;
+  }
 }
 
 /* Text Overlay Styles */
@@ -91,16 +99,6 @@ img, video, iframe {
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.4); /* Slight transparency for better text readability */
   border-radius: 8px;
-}
-
-/* Scrollbar Customization */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--accent-color);
-  border-radius: 4px;
 }
 
 /* Animations and Transitions */

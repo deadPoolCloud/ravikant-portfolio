@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import profileImage from './profilepic/Professional photo.png';
+import profileImage from './profilepic/Professional photo_enhanced.png';
 import homeback from './profilepic/homebg.jpg';
 import {
   Home, User, Briefcase, Code, Award
@@ -91,35 +91,36 @@ function App() {
               backgroundAttachment: 'fixed',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
+              minHeight: '100vh',
             }}
           >
-            <div class="text-center max-w-2xl mx-auto p-6 rounded-lg">
-  <h1 class="text-3xl md:text-4xl font-bold mb-4 text-white">Ravikant Pathak</h1>
-  <p class="text-white mb-4 text-base md:text-lg leading-relaxed">
-    I'm a QA Engineer with 2 years of experience in ensuring quality for cutting-edge applications, 
-    specializing in functional, regression, and UI testing with automated solutions.
-  </p>
-  <p class="text-white mb-4 text-base md:text-lg leading-relaxed">
-    Skilled in Selenium, TestNG, and Jenkins, I collaborate with cross-functional teams to 
-    deliver robust software solutions that exceed user expectations.
-  </p>
-  <div class="flex justify-center space-x-4 mt-6">
-    <a
-      href="mailto:ravikantpathak489@gmail.com"
-      class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-all"
-    >
-      Contact Me
-    </a>
-    <a
-      href="https://linkedin.com/in/ravikantpathak489"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-all"
-    >
-      LinkedIn Profile
-    </a>
-  </div>
-</div>
+            <div className="text-center max-w-2xl mx-auto p-6">
+              <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">Ravikant Pathak</h1>
+              <p className="text-white mb-4 text-base md:text-lg leading-relaxed">
+                I'm a QA Engineer with 2 years of experience in ensuring quality for cutting-edge applications, 
+                specializing in functional, regression, and UI testing with automated solutions.
+              </p>
+              <p className="text-white mb-4 text-base md:text-lg leading-relaxed">
+                Skilled in Selenium, TestNG, and Jenkins, I collaborate with cross-functional teams to 
+                deliver robust software solutions that exceed user expectations.
+              </p>
+              <div className="flex justify-center space-x-4 mt-6">
+                <a
+                  href="mailto:ravikantpathak489@gmail.com"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-all"
+                >
+                  Contact Me
+                </a>
+                <a
+                  href="https://linkedin.com/in/ravikantpathak489"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-all"
+                >
+                  LinkedIn Profile
+                </a>
+              </div>
+            </div>
           </div>
         );
 
