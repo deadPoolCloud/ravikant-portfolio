@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/ravikant-portfolio/static/css/main.54c53bdf.css",
-    "main.js": "/ravikant-portfolio/static/js/main.b9b41cd7.js",
+    "main.js": "/ravikant-portfolio/static/js/main.3084159e.js",
     "static/js/488.8067db21.chunk.js": "/ravikant-portfolio/static/js/488.8067db21.chunk.js",
     "static/media/phoneHome.jpg": "/ravikant-portfolio/static/media/phoneHome.3c319f97855fb009a2ec.jpg",
     "static/media/new.png": "/ravikant-portfolio/static/media/new.59e1d551f449e03d56d7.png",
     "static/media/homebg.jpg": "/ravikant-portfolio/static/media/homebg.98ddeee7e7f01370d83e.jpg",
     "index.html": "/ravikant-portfolio/index.html",
     "main.54c53bdf.css.map": "/ravikant-portfolio/static/css/main.54c53bdf.css.map",
-    "main.b9b41cd7.js.map": "/ravikant-portfolio/static/js/main.b9b41cd7.js.map",
+    "main.3084159e.js.map": "/ravikant-portfolio/static/js/main.3084159e.js.map",
     "488.8067db21.chunk.js.map": "/ravikant-portfolio/static/js/488.8067db21.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.54c53bdf.css",
-    "static/js/main.b9b41cd7.js"
+    "static/js/main.3084159e.js"
   ]
 }
