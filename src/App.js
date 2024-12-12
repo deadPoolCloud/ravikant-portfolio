@@ -86,16 +86,9 @@ function App() {
       case 'home':
         return (
           <div
-            className="flex items-center justify-center min-h-screen px-4"
-            style={{
-              backgroundImage: `url(${homeback})`,
-              backgroundAttachment: 'fixed',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              minHeight: '100vh',
-            }}
+            className="about-section flex items-center justify-center px-4" // Add 'about-section' class
           >
-            <div className="text-center max-w-2xl mx-auto p-6">
+            <div className="text-center max-w-2xl mx-auto p-6 about-section-content animate-fadeIn">
               <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">Ravikant Pathak</h1>
               <p className="text-white mb-4 text-base md:text-lg leading-relaxed">
                 I'm a QA Engineer with 2 years of experience in ensuring quality for cutting-edge applications, 
@@ -124,6 +117,7 @@ function App() {
             </div>
           </div>
         );
+        
 
         case 'about':
           return (
