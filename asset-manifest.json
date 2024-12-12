@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/ravikant-portfolio/static/css/main.d3956f44.css",
-    "main.js": "/ravikant-portfolio/static/js/main.8876888e.js",
+    "main.css": "/ravikant-portfolio/static/css/main.54c53bdf.css",
+    "main.js": "/ravikant-portfolio/static/js/main.e895907b.js",
     "static/js/488.8067db21.chunk.js": "/ravikant-portfolio/static/js/488.8067db21.chunk.js",
+    "static/media/Professional photo.png": "/ravikant-portfolio/static/media/Professional photo.4192d70893b3e344f03f.png",
+    "static/media/homebg.jpg": "/ravikant-portfolio/static/media/homebg.98ddeee7e7f01370d83e.jpg",
     "index.html": "/ravikant-portfolio/index.html",
-    "main.d3956f44.css.map": "/ravikant-portfolio/static/css/main.d3956f44.css.map",
-    "main.8876888e.js.map": "/ravikant-portfolio/static/js/main.8876888e.js.map",
+    "main.54c53bdf.css.map": "/ravikant-portfolio/static/css/main.54c53bdf.css.map",
+    "main.e895907b.js.map": "/ravikant-portfolio/static/js/main.e895907b.js.map",
     "488.8067db21.chunk.js.map": "/ravikant-portfolio/static/js/488.8067db21.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d3956f44.css",
-    "static/js/main.8876888e.js"
+    "static/css/main.54c53bdf.css",
+    "static/js/main.e895907b.js"
   ]
 }
