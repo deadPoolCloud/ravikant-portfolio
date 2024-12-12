@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import profileImage from './profilepic/Professional photo_enhanced.png';
+import profileImage from './profilepic/new.png';
 import homeback from './profilepic/homebg.jpg';
 import {
   Home, User, Briefcase, Code, Award
