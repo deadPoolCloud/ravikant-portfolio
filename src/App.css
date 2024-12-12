@@ -58,27 +58,18 @@ img, video, iframe {
   height: auto;
   object-fit: contain;
 }
+
 /* About Section Background */
 .about-section {
   position: relative;
-  min-height: 100vh; /* Full viewport height */
-  background-image: url('./profilepic/homebg.jpg'); /* Update to correct path */
-  background-size: cover; /* Ensure the image covers the container */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent tiling */
-  background-attachment: fixed; /* Fixed for desktop */
+  min-height: 100vh;
+  background-image: url('./profilepic/Screenshot from 2024-12-12 11-30-14.png'); /* Update path to your image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps the background fixed during scroll */
   color: white;
   padding-top: 20px;
 }
-
-/* Mobile Adjustments */
-@media screen and (max-width: 768px) {
-  .about-section {
-    background-attachment: scroll; /* Override fixed background on mobile */
-    background-size: cover; /* Ensure full coverage */
-  }
-}
-
 
 /* Text Overlay Styles */
 .about-section-overlay {
@@ -100,6 +91,16 @@ img, video, iframe {
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.4); /* Slight transparency for better text readability */
   border-radius: 8px;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
 }
 
 /* Animations and Transitions */
