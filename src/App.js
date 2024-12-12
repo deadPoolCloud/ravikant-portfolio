@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Home, User, Briefcase, Code, Award 
+import {
+  Home, User, Briefcase, Code, Award
 } from 'lucide-react';
 
 function App() {
@@ -78,126 +78,97 @@ function App() {
     </nav>
   );
 
-    const renderSection = () => {
+  const renderSection = () => {
     switch (activeSection) {
       case 'home':
         return (
-          <div className="text-center p-6 animate-fadeIn">
-            <h1 className="text-4xl font-bold mb-4 text-white">Ravikant Pathak</h1>
-            <p
-              dir="ltr"
-              className="CDt4Ke zfr3Q mb-6"
-              style={{
-                textAlign: 'justify',
-                whiteSpace: 'normal',
-                color: '#ffffff',
-                fontSize: '13pt',
-                lineHeight: '1.6',
-              }}
-            >
-              Hi, I am <span style={{ fontWeight: 'bold', fontSize: '13pt', color: '#ffffff' }}>Ravikant Pathak</span>, a
-              <span style={{ fontWeight: 'bold', fontFamily: 'Lato', fontSize: '13pt', color: '#ffffff' }}> QA Engineer </span>
-              with 2 years of professional experience in ensuring the quality and reliability of cutting-edge applications,
-              including AI-powered platforms. I specialize in functional, regression, and UI testing while delivering automated
-              solutions for quality assurance.
-            </p>
-            <p
-              className="CDt4Ke zfr3Q mb-6"
-              style={{
-                textAlign: 'justify',
-                whiteSpace: 'normal',
-                color: '#ffffff',
-                fontSize: '13pt',
-                lineHeight: '1.6',
-              }}
-            >
-              My expertise lies in designing and implementing efficient automated solutions using tools like Selenium, TestNG,
-              and Jenkins, streamlining testing processes, and accelerating development cycles while maintaining high standards
-              of performance and functionality.
-            </p>
-            <p
-              className="CDt4Ke zfr3Q mb-6"
-              style={{
-                textAlign: 'justify',
-                whiteSpace: 'normal',
-                color: '#ffffff',
-                fontSize: '13pt',
-                lineHeight: '1.6',
-              }}
-            >
-              I am passionate about collaborating with cross-functional teams to identify and resolve critical issues, ensuring
-              robust software systems that meet and exceed end-user expectations. Whether it's functional validation, end-to-end
-              testing, or ensuring consistent quality across complex workflows, I approach each challenge with a meticulous and
-              innovative mindset.
-            </p>
-            <div className="mt-6 flex justify-center gap-4">
-              <a
-                href="mailto:ravikantpathak489@gmail.com"
-                className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-all"
-              >
-                Contact Me
-              </a>
-              <a
-                href="https://linkedin.com/in/ravikantpathak489"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-all"
-              >
-                LinkedIn Profile
-              </a>
+          <div className="flex items-center justify-center min-h-screen px-4">
+            <div className="text-center max-w-2xl mx-auto">
+              <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">Ravikant Pathak</h1>
+              <p className="text-white mb-4 text-base md:text-lg leading-relaxed">
+                I'm a QA Engineer with 2 years of experience in ensuring quality for cutting-edge applications, 
+                specializing in functional, regression, and UI testing with automated solutions.
+              </p>
+              <p className="text-white mb-4 text-base md:text-lg leading-relaxed">
+                Skilled in Selenium, TestNG, and Jenkins, I collaborate with cross-functional teams to 
+                deliver robust software solutions that exceed user expectations.
+              </p>
+              <div className="flex justify-center space-x-4 mt-6">
+                <a
+                  href="mailto:ravikantpathak489@gmail.com"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-all"
+                >
+                  Contact Me
+                </a>
+                <a
+                  href="https://linkedin.com/in/ravikantpathak489"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-all"
+                >
+                  LinkedIn Profile
+                </a>
+              </div>
             </div>
           </div>
         );
 
-        case 'about':
-          return (
-            <div className="container mx-auto p-4 md:p-8 text-white">
-              <div className="flex flex-col md:flex-row gap-8">
-                {/* Professional Profile Section (Left Side) */}
-                <div className="w-full md:w-1/2">
-                  <h2 className="text-4xl font-bold mb-6">About Me</h2>
-                  <div className="mb-12">
-                    <h3 className="text-2xl font-bold mb-4">Professional Profile</h3>
-                    <p className="text-lg text-gray-300 mb-4">
-                      As a dedicated QA Engineer, I specialize in ensuring the quality of both web and mobile applications through comprehensive testing strategies and automation. With expertise in test automation, AI-powered testing, and a focus on delivering high-quality software, I aim to contribute to products that exceed functional and user-experience expectations. My background includes hands-on experience with Selenium, Appium, TestNG, and other automation tools that allow me to build scalable, efficient frameworks.
-                    </p>
-                    <p className="text-lg text-gray-300 mb-4">
-                      I have a passion for creating robust automation frameworks that not only streamline testing processes but also minimize human error, improving efficiency and overall product quality. My approach is rooted in continuous improvement—whether it's automating repetitive test cases or optimizing performance through tools like JMeter. I am well-versed in integrating these automation practices into CI/CD pipelines using Jenkins, ensuring that continuous testing is an integral part of the development lifecycle.
-                    </p>
-                    <p className="text-lg text-gray-300 mb-4">
-                      In addition to my technical skills, I excel in collaborating with cross-functional teams in agile environments, focusing on sprint goals and adapting quickly to project requirements. My experience in AI-driven testing gives me a unique ability to test intelligent features, ensuring they perform as intended under various conditions. Through these efforts, I contribute to delivering software that is not only functional but also performs optimally, providing users with seamless experiences.
-                    </p>
-                  </div>
-                </div>
-        
-                {/* Right Side (Education & Training Section) */}
-                <div className="w-full md:w-1/2">
-                  {/* Education Section */}
-                  <h3 className="text-2xl font-bold mb-4">Education</h3>
-                  <p className="text-lg text-gray-300 mb-2">
-                    B.Tech in Mechanical Engineering | Coochbehar Government Engineering College, 2018 - 2022
+      case 'about':
+        return (
+          <div className="container mx-auto p-4 md:p-8 text-white">
+            <div className="flex flex-col md:flex-row gap-8">
+              {/* Professional Profile Section (Left Side) */}
+              <div className="w-full md:w-1/2">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
+                <div className="mb-12">
+                  <h3 className="text-2xl font-bold mb-4">Professional Profile</h3>
+                  <p className="text-base md:text-lg text-gray-300 mb-4">
+                    As a QA Engineer, I specialize in ensuring software quality through strategic testing and automation. 
+                    My expertise spans web and mobile applications, leveraging tools like Selenium, Appium, and TestNG 
+                    to create efficient, scalable testing frameworks.
                   </p>
-                  <p className="text-gray-300 text-lg mb-4">CGPA: 8.65</p>
-                  <p className="text-gray-300 text-lg mb-4">
-                    Although my degree is in Mechanical Engineering, my deep interest in technology and software engineering led me to transition into Quality Assurance. During my academic journey, I honed problem-solving skills that now help me approach testing challenges from a structured, analytical perspective. My coursework and internships allowed me to explore various technical domains, and ultimately, I found my passion in software testing and automation.
+                  <p className="text-base md:text-lg text-gray-300 mb-4">
+                    I focus on building robust automation solutions that streamline testing processes, minimize errors, 
+                    and integrate seamlessly with CI/CD pipelines using Jenkins. My approach combines technical precision 
+                    with continuous improvement.
                   </p>
-        
-                  {/* Training & Certifications Section */}
-                  <h3 className="text-2xl font-bold mb-4">Training & Certifications</h3>
-                  <ul className="list-disc pl-6 text-lg text-gray-300 mb-4">
-                    <li className="mb-2">Certified in Advanced Selenium Automation</li>
-                    <li className="mb-2">ISTQB Certified Tester – Foundation Level</li>
-                    <li className="mb-2">Tricentis Tosca AE1 and AE2 (in progress)</li>
-                    <li className="mb-2">AWS Certified Cloud Practitioner (planned)</li>
-                    <li className="mb-2">Certified Jenkins Engineer (planned)</li>
-                  </ul>
-                  <p className="text-lg text-gray-300 mb-4">
-                    In addition to my degree, I have undergone specialized training that has provided me with practical knowledge and skills to excel in the field of software testing. A comprehensive Software Testing course at QSpiders Kolkata has further refined my skills in both manual and automation testing, making me well-equipped to handle real-world testing challenges. The course included hands-on experience with tools like Selenium, TestNG, Postman, and JMeter, covering aspects from test case creation to performance testing and API testing.
+                  <p className="text-base md:text-lg text-gray-300 mb-4">
+                    Collaborating in agile environments, I contribute to delivering high-quality software that meets 
+                    both functional requirements and user experience expectations.
                   </p>
                 </div>
               </div>
+      
+              {/* Right Side (Education & Training Section) */}
+              <div className="w-full md:w-1/2">
+                {/* Education Section */}
+                <h3 className="text-2xl font-bold mb-4">Education</h3>
+                <p className="text-base md:text-lg text-gray-300 mb-2">
+                  B.Tech in Mechanical Engineering | Coochbehar Government Engineering College, 2018 - 2022
+                </p>
+                <p className="text-gray-300 text-base md:text-lg mb-4">CGPA: 8.65</p>
+                <p className="text-gray-300 text-base md:text-lg mb-4">
+                  Despite a mechanical engineering background, I transitioned to QA, applying my analytical problem-solving 
+                  skills to software testing and automation.
+                </p>
+      
+                {/* Training & Certifications Section */}
+                <h3 className="text-2xl font-bold mb-4">Training & Certifications</h3>
+                <ul className="list-disc pl-6 text-base md:text-lg text-gray-300 mb-4">
+                  <li className="mb-2">Certified in Advanced Selenium Automation</li>
+                  <li className="mb-2">ISTQB Certified Tester – Foundation Level</li>
+                  <li className="mb-2">Tricentis Tosca AE1 and AE2 (in progress)</li>
+                  <li className="mb-2">AWS Certified Cloud Practitioner (planned)</li>
+                  <li className="mb-2">Certified Jenkins Engineer (planned)</li>
+                </ul>
+                <p className="text-base md:text-lg text-gray-300 mb-4">
+                  I completed a comprehensive Software Testing course at QSpiders Kolkata, gaining practical skills 
+                  in manual and automation testing across tools like Selenium, TestNG, Postman, and JMeter.
+                </p>
+              </div>
             </div>
-          );
+          </div>
+        );
 
       case 'experience':
         return (
@@ -264,7 +235,7 @@ function App() {
           </div>
         );
 
-    case 'projects':
+      case 'projects':
         return (
           <div className="p-8 text-white">
             <h2 className="text-4xl font-bold mb-6">Projects</h2>
@@ -341,9 +312,9 @@ function App() {
     }
   };
 
- 
+
   return (
-    <div 
+    <div
       className="min-h-screen bg-gray-900 text-gray-300 flex flex-col overflow-x-hidden"
       style={{
         width: '100vw',
