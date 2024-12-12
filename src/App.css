@@ -59,16 +59,26 @@ img, video, iframe {
   object-fit: contain;
 }
 
-/* About Section Background */
+/* About Section Background for Desktop */
 .about-section {
   position: relative;
-  min-height: 100vh;
-  background-image: url('./profilepic/Screenshot from 2024-12-12 11-30-14.png'); /* Update path to your image */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Keeps the background fixed during scroll */
+  min-height: 100vh; /* Full viewport height */
+  background-image: url('./profilepic/homebg.jpg'); /* Desktop background image */
+  background-size: cover; /* Ensure the image covers the container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-attachment: fixed; /* Fixed for desktop */
   color: white;
   padding-top: 20px;
+}
+
+/* About Section Background for Phones */
+@media screen and (max-width: 768px) {
+  .about-section {
+    background-image: url('./profilepic/phoneHome.jpg'); /* Mobile background image */
+    background-attachment: scroll; /* Scroll for better performance */
+    background-size: cover; /* Ensure full coverage */
+  }
 }
 
 /* Text Overlay Styles */
