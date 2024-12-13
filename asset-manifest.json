@@ -1,17 +1,21 @@
 {
   "files": {
-    "main.css": "/ravikant-portfolio/static/css/main.8828047a.css",
-    "main.js": "/ravikant-portfolio/static/js/main.e2a362d5.js",
+    "main.css": "/ravikant-portfolio/static/css/main.a4c4573d.css",
+    "main.js": "/ravikant-portfolio/static/js/main.63dee0ce.js",
     "static/js/488.8067db21.chunk.js": "/ravikant-portfolio/static/js/488.8067db21.chunk.js",
-    "static/media/phoneHome.jpg": "/ravikant-portfolio/static/media/phoneHome.3c319f97855fb009a2ec.jpg",
+    "static/media/31392-386603663_large.mp4": "/ravikant-portfolio/static/media/31392-386603663_large.b65efb1c8206fbca9c1a.mp4",
+    "static/media/220941_large.mp4": "/ravikant-portfolio/static/media/220941_large.9640a1db1e7168ae800e.mp4",
+    "static/media/174087-850404742_large.mp4": "/ravikant-portfolio/static/media/174087-850404742_large.a8248c9c789f5ce47b15.mp4",
+    "static/media/144584-785095786_large.mp4": "/ravikant-portfolio/static/media/144584-785095786_large.c69163c89cea4345d2ca.mp4",
+    "static/media/4733-179738669_large.mp4": "/ravikant-portfolio/static/media/4733-179738669_large.da689f436a89f8946305.mp4",
     "static/media/new.png": "/ravikant-portfolio/static/media/new.59e1d551f449e03d56d7.png",
     "index.html": "/ravikant-portfolio/index.html",
-    "main.8828047a.css.map": "/ravikant-portfolio/static/css/main.8828047a.css.map",
-    "main.e2a362d5.js.map": "/ravikant-portfolio/static/js/main.e2a362d5.js.map",
+    "main.a4c4573d.css.map": "/ravikant-portfolio/static/css/main.a4c4573d.css.map",
+    "main.63dee0ce.js.map": "/ravikant-portfolio/static/js/main.63dee0ce.js.map",
     "488.8067db21.chunk.js.map": "/ravikant-portfolio/static/js/488.8067db21.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8828047a.css",
-    "static/js/main.e2a362d5.js"
+    "static/css/main.a4c4573d.css",
+    "static/js/main.63dee0ce.js"
   ]
 }
