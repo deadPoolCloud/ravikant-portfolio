@@ -16,7 +16,6 @@ html, body {
   --text-primary: #e2e8f0;
   --accent-color: #3182ce;
   --hover-color: #4299e1;
-  --bg-image-opacity: 0.6; /* Optional: controls opacity of background image */
 }
 
 /* Scrollbar Customization */
@@ -47,87 +46,53 @@ html {
 }
 
 @media (max-width: 768px) {
-  .nav-item {
+  html {
     font-size: 14px;
-    padding: 8px 12px;
+  }
+
+  body {
+    font-size: 0.875rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
   }
 }
-
 
 /* Responsive Images and Media */
-img, video, iframe {
+img {
   max-width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
 }
 
-/* About Section Background */
-.about-section {
-  position: relative;
-  min-height: 100vh;
-  background-image: url('./profilepic/Screenshot from 2024-12-12 11-30-14.png'); /* Update path to your image */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Keeps the background fixed during scroll */
-  color: white;
-  padding-top: 20px;
-}
-
-/* Mobile Styles for Background Image */
-@media screen and (max-width: 768px) {
-  .about-section {
-    background-attachment: scroll; /* Prevent fixed background issues on mobile */
-    background-size: contain; /* Ensure the image fits without clipping */
-    background-position: top center; /* Align the image for better visibility */
+/* Mobile Responsive Animations */
+@keyframes slideIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
   }
 }
 
-/* Text Overlay Styles */
-.about-section-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, var(--bg-image-opacity)); /* Darkens background for better text readability */
-  z-index: 1;
+.mobile-animate {
+  animation: slideIn 0.5s ease-out;
 }
 
-/* Text Content Styling */
-.about-section-content {
-  position: relative;
-  z-index: 2;
-  padding: 40px;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.4); /* Slight transparency for better text readability */
-  border-radius: 8px;
-}
-
-/* Scrollbar Customization */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--accent-color);
-  border-radius: 4px;
-}
-
-/* Animations and Transitions */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.5s ease-out;
-}
-
-/* Accessibility and Focus States */
-button:focus, a:focus {
-  outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
+/* Accessibility Enhancements */
+@media (max-width: 768px) {
+  /* Increase touch target sizes */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }
 
 /* Print Styles */
@@ -137,10 +102,20 @@ button:focus, a:focus {
     color: black;
   }
 }
+/* Background image styling */
+.background-image {
+  background-image: url('./profilepic/phoneHome.jpg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  width: 100%; /* Makes sure it spans the entire width */
+  height: 100vh; /* Adjusts height to fit the viewport */
+}
 
-/* Mobile Styles */
-@media screen and (max-width: 768px) {
-  .about-section-content {
-    padding: 20px;
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .background-image {
+    background-size: contain; /* Adjusts image size for smaller screens */
+    height: auto; /* Ensures it adapts to content height */
   }
 }
